@@ -6,12 +6,10 @@ Static portfolio site built to replace the UXfolio-hosted version. Designed for 
 - `index.html` — Main portfolio page
 - `assets/css/style.css` — All styles (Raleway font, responsive)
 - `assets/images/` — Drop your images here (see below)
-- `assets/resume.pdf` — Drop your résumé PDF here
 
 ## Image files expected
 | Filename | Used for |
 |---|---|
-| `assets/images/profile.jpg` | Your headshot in the header |
 | `assets/images/project-entitlement.jpg` | Red Hat case study thumbnail |
 | `assets/images/article-covid.jpg` | UXPA Magazine article image |
 | `assets/images/article-microcopy.jpg` | Red Hat Blog article image |
