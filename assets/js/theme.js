@@ -1,22 +1,38 @@
-:root {
-  --bg: #ffffff;
-  --text: #111111;
-  --accent: #ee0000;
+const toggleButton = document.querySelector(".theme-toggle");
+
+const currentTheme =
+  localStorage.getItem("theme");
+
+if (currentTheme) {
+  document.documentElement.setAttribute(
+    "data-theme",
+    currentTheme
+  );
 }
 
-[data-theme="dark"] {
-  --bg: #0f1115;
-  --text: #f5f5f5;
-}
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
 
-body {
-  background: var(--bg);
-  color: var(--text);
+    let theme =
+      document.documentElement.getAttribute(
+        "data-theme"
+      );
 
-  font-family: "Work Sans", sans-serif;
+    if (theme === "dark") {
+      theme = "light";
+    } else {
+      theme = "dark";
+    }
 
-  max-width: 1200px;
-  margin: auto;
+    document.documentElement.setAttribute(
+      "data-theme",
+      theme
+    );
 
-  padding: 2rem;
+    localStorage.setItem(
+      "theme",
+      theme
+    );
+
+  });
 }
