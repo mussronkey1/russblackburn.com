@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Russ Blackburn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Russ Blackburn | Principal UX Designer</title>
+
+<meta
+ name="description"
+ content="Principal UX Designer at Red Hat specializing in enterprise SaaS, customer experience, service design, and digital product strategy.">
 
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -10,27 +18,192 @@
 <body>
 
 <header>
-  <img src="assets/images/logo.jpg" alt="Russ Blackburn">
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/work/">Work</a>
-    <a href="/articles/">Articles</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+  <div class="navbar">
+
+```
+<a href="index.html">
+  <img
+    class="logo"
+    src="assets/images/logo.jpg"
+    alt="Russ Blackburn Logo">
+</a>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="work/index.html">Work</a>
+  <a href="articles/index.html">Articles</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+  <button
+    class="theme-toggle"
+    aria-label="Toggle dark mode">
+    🌙
+  </button>
+</nav>
+```
+
+  </div>
+
 </header>
 
 <main>
 
-<h1>Principal UX Designer</h1>
+<section class="hero container">
 
-<p>
-I design enterprise experiences that help customers
-navigate complexity with confidence.
-</p>
+  <h1>
+    Principal UX Designer
+  </h1>
+
+  <p>
+    I design enterprise experiences that help
+    customers navigate complexity with confidence.
+  </p>
+
+  <p>
+    For more than twenty years, I've designed
+    customer-focused experiences spanning
+    enterprise SaaS, customer portals,
+    subscription management,
+    identity systems,
+    e-commerce,
+    and service design.
+  </p>
+
+<a
+ class="button"
+ href="work/index.html">
+View Work </a>
+
+</section>
+
+<section class="projects container">
+
+  <h2 class="section-title">
+    Featured Work
+  </h2>
+
+  <div class="project-grid">
+
+```
+<article class="project-card">
+
+  <img
+    src="assets/images/project-entitlement.jpg"
+    alt="IBM and Red Hat Entitlement Automation">
+
+  <div class="project-content">
+
+    <h3>
+      IBM & Red Hat Entitlement Automation
+    </h3>
+
+    <p>
+      Designed a self-service entitlement
+      system enabling customers to activate
+      Red Hat subscriptions purchased through
+      IBM Cloud Paks.
+    </p>
+
+    <a
+      class="button"
+      href="work/ibm-redhat-entitlement/index.html">
+      View Case Study
+    </a>
+
+  </div>
+
+</article>
+```
+
+  </div>
+
+</section>
+
+<section class="projects container">
+
+  <h2 class="section-title">
+    Writing & Thought Leadership
+  </h2>
+
+  <div class="project-grid">
+
+```
+<article class="project-card">
+
+  <img
+    src="assets/images/article-covid.jpg"
+    alt="Remote Collaboration During COVID">
+
+  <div class="project-content">
+
+    <h3>
+      Remote Collaboration During COVID
+    </h3>
+
+    <p>
+      Lessons learned from facilitating
+      design collaboration while teams
+      transitioned to fully remote work.
+    </p>
+
+    <a
+      class="button"
+      href="articles/remote-collaboration-covid.html">
+      Read Article
+    </a>
+
+  </div>
+
+</article>
+
+<article class="project-card">
+
+  <img
+    src="assets/images/article-microcopy.jpg"
+    alt="Interaction and Microcopy">
+
+  <div class="project-content">
+
+    <h3>
+      Interaction & Microcopy
+    </h3>
+
+    <p>
+      How thoughtful language and UX design
+      reduce friction during onboarding
+      and account setup experiences.
+    </p>
+
+    <a
+      class="button"
+      href="articles/interaction-microcopy.html">
+      Read Article
+    </a>
+
+  </div>
+
+</article>
+```
+
+  </div>
+
+</section>
 
 </main>
+
+<footer>
+
+  <p>
+    © 2026 Russ Blackburn
+  </p>
+
+  <p>
+    Principal UX Designer at Red Hat
+  </p>
+
+</footer>
 
 <script src="assets/js/theme.js"></script>
 
