@@ -63,20 +63,25 @@ body {
    Header
    ========================================== */
 
-header {
-  position: sticky;
-  top: 0;
-
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid var(--border);
-
-  z-index: 100;
+.page-header {
+  padding: 8rem 0 4rem;
 }
 
-[data-theme="dark"] header {
-  background: rgba(15,17,21,0.9);
+.page-header h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  max-width: 750px;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.page-content {
+  padding-bottom: 6rem;
 }
 
 .navbar {
