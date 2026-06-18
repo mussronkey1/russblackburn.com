@@ -91,7 +91,7 @@ header {
 }
 
 .logo {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
@@ -118,13 +118,13 @@ nav a:hover {
    ========================================== */
 
 .hero {
-  padding: 8rem 0 6rem;
+  padding: 10rem 0 8rem;
 }
 
 .hero h1 {
   font-family: "Bricolage Grotesque", sans-serif;
 
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(4rem, 7vw, 6rem);
   line-height: 1.05;
 
   margin-bottom: 1rem;
