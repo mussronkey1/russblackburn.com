@@ -1,1 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Designing an Intelligent Provisioning Router for Red Hat Enterprise Linux | Russ Blackburn</title>
+
+<meta
+name="description"
+content="Case study detailing the redesign of the Red Hat Enterprise Linux evaluation experience through intelligent routing, personalization, and experience orchestration.">
+
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<a href="../../index.html">
+<img
+class="logo"
+src="../../assets/images/logo.svg"
+alt="Russ Blackburn Logo">
+</a>
+
+<nav>
+
+<a href="../../index.html">Home</a>
+<a href="../index.html">Work</a>
+<a href="../../articles/index.html">Articles</a>
+<a href="../../about.html">About</a>
+<a href="../../contact.html">Contact</a>
+
+<button
+class="theme-toggle"
+id="theme-toggle"
+aria-label="Toggle dark mode">
+🌙
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="hero container">
+
+<p style="color:var(--accent);font-weight:600;">
+CASE STUDY
+</p>
+
+<h1>
+Designing an Intelligent Provisioning Router for Red Hat Enterprise Linux
+</h1>
+
+<p>
+Replacing a static product download experience with a personalized decision engine that guides enterprise architects, developers, and system administrators to the right Red Hat Enterprise Linux deployment path.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Executive Overview</h2>
+
+<p>
+Red Hat's digital ecosystem serves millions of enterprise technology professionals evaluating hybrid cloud infrastructure, operating systems, containers, and cloud-native platforms.
+</p>
+
+<p>
+One of the most critical entry points into that ecosystem is Red Hat Enterprise Linux (RHEL), where prospective customers must determine how to evaluate, install, or deploy the platform.
+</p>
+
+<p>
+The existing experience relied on a static repository of deployment options internally referred to as the "Table of Doom" — a dense collection of downloads, installation methods, architectures, and provisioning pathways that forced users to decipher complex technical decisions without guidance.
+</p>
+
+<p>
+The result was decision paralysis, abandoned evaluation journeys, and significant leakage throughout the acquisition funnel.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Role & Team</h2>
+
+<p>
+
+<strong>Role:</strong>
+Principal UX Product Designer
+
+</p>
+
+<p>
+
+<strong>Cross-Functional Partners:</strong>
+
+Amanda Berneburg, Jess Sturgis, Dan Caryll, Liz Wood, Hadley Million, Digital Experience teams, Engineering stakeholders, and Product Leadership.
+
+</p>
+
+<p>
+
+<strong>Platforms:</strong>
+
+RedHat.com, Developer Portal, Customer Portal, Product Trial Experiences, and Enterprise SaaS Ecosystems.
+
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>The Problem</h2>
+
+<p>
+During discovery, it became clear that the challenge extended beyond content organization.
+</p>
+
+<p>
+The platform lacked an intelligence layer capable of translating user intent into meaningful outcomes.
+</p>
+
+<p>
+The experience functioned as a digital brochure rather than an interactive decision-support system.
+</p>
+
+<p>
+Users were expected to independently determine:
+</p>
+
+<ul>
+
+<li>Which deployment method they needed</li>
+<li>Which architecture they should select</li>
+<li>Whether to use cloud images, ISOs, or containerized environments</li>
+<li>Whether they should begin with an interactive learning experience instead</li>
+
+</ul>
+
+<p>
+Every decision increased cognitive load and reduced the likelihood of successful activation.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Discovery & Systems Mapping</h2>
+
+<p>
+I mapped the complete evaluation ecosystem and uncovered substantial fragmentation across multiple product experiences.
+</p>
+
+<p>
+What initially appeared to be a single download experience was actually composed of numerous disconnected pathways serving different audiences.
+</p>
+
+<p>
+The ecosystem contained:
+</p>
+
+<ul>
+
+<li>Developer program download flows</li>
+<li>Enterprise customer portal download flows</li>
+<li>Interactive learning environments</li>
+<li>Cloud marketplace provisioning experiences</li>
+<li>Image Builder workflows</li>
+<li>Traditional ISO installation pathways</li>
+<li>Trial environments</li>
+<li>Sales-assisted evaluation channels</li>
+
+</ul>
+
+<p>
+Each operated independently with limited orchestration between systems.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Key Insight</h2>
+
+<p>
+Users were not arriving with deployment-format questions.
+</p>
+
+<p>
+They were arriving with goals.
+</p>
+
+<p>
+The business was presenting technical outputs before understanding user intent.
+</p>
+
+<p>
+This became the foundational design principle for the project.
+</p>
+
+<p>
+Instead of asking:
+</p>
+
+<ul>
+
+<li>Do you want a boot ISO?</li>
+<li>Do you want Image Builder?</li>
+<li>Do you want a cloud image?</li>
+
+</ul>
+
+<p>
+The system should first ask:
+</p>
+
+<ul>
+
+<li>Are you here to learn?</li>
+<li>Are you evaluating a deployment?</li>
+<li>Are you building cloud infrastructure?</li>
+<li>Are you preparing for production?</li>
+
+</ul>
+
+</section>
+
+<section class="content-page">
+
+<h2>Engineering Constraints</h2>
+
+<p>
+The long-term vision required dynamic personalization and intent-based orchestration.
+</p>
+
+<p>
+However, discovery revealed a significant technical limitation within the existing Adobe Recommendations implementation.
+</p>
+
+<p>
+The platform could personalize content using predefined audience segments but could not dynamically generate recommendations based on real-time user input.
+</p>
+
+<p>
+To overcome this constraint, I partnered with engineering stakeholders to define a phased delivery approach.
+</p>
+
+<p>
+The initial MVP utilized client-side JavaScript logic to power routing decisions while avoiding major backend dependencies.
+</p>
+
+<p>
+This allowed us to validate the experience model immediately while establishing a pathway toward a future AI-assisted orchestration framework.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>The Solution</h2>
+
+<p>
+I designed an Intelligent Provisioning Router to replace the static download experience.
+</p>
+
+<p>
+Rather than overwhelming users with deployment options, the experience guides users through a lightweight decision flow that progressively narrows available choices.
+</p>
+
+<p>
+The interaction model shifts from:
+</p>
+
+<p>
+<strong>Browse → Compare → Guess → Download</strong>
+</p>
+
+<p>
+to:
+</p>
+
+<p>
+<strong>Intent → Qualification → Recommendation → Activation</strong>
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Progressive Decision Architecture</h2>
+
+<p>
+The provisioning router introduces a lightweight "Micro-Wizard" that gathers context before presenting deployment options.
+</p>
+
+<p>
+Users first identify their objective:
+</p>
+
+<ul>
+
+<li>Learn RHEL</li>
+<li>Build a Cloud Image</li>
+<li>Install Locally</li>
+<li>Evaluate for Production</li>
+
+</ul>
+
+<p>
+Additional questions then refine recommendations based on environment, architecture, and deployment goals.
+</p>
+
+<p>
+The system dynamically suppresses irrelevant choices and surfaces only the most appropriate pathway.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Managing Edge Cases</h2>
+
+<p>
+The experience was designed to support ambiguity rather than punish it.
+</p>
+
+<p>
+When users were uncertain about their objectives, the router presented a "Help Me Choose" pathway that guided decision making through contextual recommendations.
+</p>
+
+<p>
+Authentication barriers were strategically deferred until after routing decisions were completed.
+</p>
+
+<p>
+This prevented users from encountering account creation requirements before understanding the value of the destination experience.
+</p>
+
+<p>
+The result was a lower-friction acquisition journey with fewer premature exits.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Strategic Vision</h2>
+
+<p>
+The provisioning router was intentionally designed as the first phase of a broader Experience Orchestration framework.
+</p>
+
+<p>
+The long-term roadmap expanded beyond static routing into conversational recommendation engines capable of generating personalized provisioning pathways in real time.
+</p>
+
+<p>
+To support executive decision making, I created dual-track concepts demonstrating:
+</p>
+
+<ul>
+
+<li>Near-term personalized orchestration experiences</li>
+<li>Future-state AI-generated experience models</li>
+
+</ul>
+
+<p>
+These concepts helped establish alignment around a unified experience strategy across multiple business units.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Business Impact</h2>
+
+<p>
+The new experience architecture was designed to eliminate Day 0 abandonment and accelerate time-to-value for prospective customers.
+</p>
+
+<p>
+Expected outcomes included:
+</p>
+
+<ul>
+
+<li>Improved routing accuracy</li>
+<li>Reduced time-to-start</li>
+<li>Higher activation completion rates</li>
+<li>Reduced support burden</li>
+<li>Increased qualified evaluation traffic</li>
+
+</ul>
+
+<p>
+Most importantly, the solution transformed the platform from a passive content repository into an active decision-support system.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Organizational Impact</h2>
+
+<p>
+Beyond customer outcomes, the project became a catalyst for broader organizational alignment.
+</p>
+
+<p>
+Historically disconnected teams were forced to converge around shared definitions of user intent, evaluation pathways, and activation success.
+</p>
+
+<p>
+The initiative ultimately influenced a larger Global Experience Orchestration strategy that continues to shape how Red Hat approaches customer acquisition and product evaluation experiences.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Reflection</h2>
+
+<p>
+This project reinforced an important principle of enterprise UX:
+</p>
+
+<p>
+Users rarely need more choices.
+</p>
+
+<p>
+They need better guidance.
+</p>
+
+<p>
+The most impactful design work often involves creating the logic layer between user intent and system complexity.
+</p>
+
+<p>
+By introducing intelligent routing and progressive decision architecture, we transformed an overwhelming product catalog into an experience that actively helped customers achieve their goals.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>© 2026 Russ Blackburn</p>
+
+<p>
+Principal UX Designer at Red Hat
+</p>
+
+</footer>
+
+<script src="../../assets/js/theme.js"></script>
+
+</body>
+</html>
