@@ -1,1 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Re-Architecting the Red Hat Product Trial Ecosystem | Russ Blackburn</title>
+
+<meta
+name="description"
+content="Case study detailing the redesign of the Red Hat Product Trial ecosystem, subscription onboarding, marketplace activations, and trial management experiences.">
+
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<a href="../../index.html">
+<img
+class="logo"
+src="../../assets/images/logo.svg"
+alt="Russ Blackburn Logo">
+</a>
+
+<nav>
+
+<a href="../../index.html">Home</a>
+<a href="../index.html">Work</a>
+<a href="../../articles/index.html">Articles</a>
+<a href="../../about.html">About</a>
+<a href="../../contact.html">Contact</a>
+
+<button
+class="theme-toggle"
+id="theme-toggle"
+aria-label="Toggle dark mode">
+🌙
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="hero container">
+
+<p style="color:var(--accent);font-weight:600;">
+CASE STUDY
+</p>
+
+<h1>
+Re-Architecting the Red Hat Product Trial Ecosystem
+</h1>
+
+<p>
+Transforming a fragmented evaluation experience into a scalable self-service platform supporting enterprise buyers, cloud marketplace users, and technical evaluators across the Red Hat portfolio.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Project Overview</h2>
+
+<p>
+Red Hat Product Trials (RHPT) serves as the primary evaluation and acquisition platform for products including OpenShift, Red Hat Enterprise Linux, Ansible, and cloud-native services.
+</p>
+
+<p>
+The ecosystem supports multiple acquisition channels including self-service product trials, sales-assisted evaluations, AWS Marketplace deployments, and enterprise subscription evaluations.
+</p>
+
+<p>
+As adoption expanded, the platform accumulated significant operational complexity, fragmented activation journeys, and limited visibility into user behavior across systems.
+</p>
+
+<p>
+My role was to redesign the end-to-end onboarding, activation, subscription management, and trial lifecycle experience while improving telemetry, reducing friction, and increasing conversion efficiency.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Role & Responsibilities</h2>
+
+<ul>
+
+<li>Principal UX Product Designer</li>
+<li>Product Strategy</li>
+<li>Experience Architecture</li>
+<li>Dashboard Design</li>
+<li>Subscription Management</li>
+<li>Cross-Functional Leadership</li>
+<li>Design Systems Governance</li>
+<li>Marketplace Experience Design</li>
+<li>Analytics & Optimization</li>
+
+</ul>
+
+<p>
+
+<strong>Partners:</strong>
+
+Product Management, UX Research, Digital Analytics, Design Engineering, Cloud Operations, IT Engineering, and Global Sales Teams.
+
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>The Challenge</h2>
+
+<p>
+The product trial ecosystem evolved across numerous disconnected systems and acquisition channels.
+</p>
+
+<p>
+This resulted in significant friction for both customers and internal stakeholders.
+</p>
+
+<h3>Customer Challenges</h3>
+
+<ul>
+
+<li>Complex onboarding journeys</li>
+<li>Multiple authentication handoffs</li>
+<li>Fragmented activation experiences</li>
+<li>Poor subscription visibility</li>
+<li>Limited lifecycle management</li>
+
+</ul>
+
+<h3>Business Challenges</h3>
+
+<ul>
+
+<li>Disconnected systems</li>
+<li>Manual sales workflows</li>
+<li>Limited telemetry</li>
+<li>Slow publishing processes</li>
+<li>Fragmented ownership across teams</li>
+
+</ul>
+
+<p>
+The most significant issue emerged within AWS Marketplace activation workflows where users successfully authenticated through Red Hat SSO but encountered a hidden permissions barrier requiring elevated AWS IAM administrative privileges.
+</p>
+
+<p>
+Customers demonstrated strong intent but failed before completing activation.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Discovery & Systems Mapping</h2>
+
+<p>
+The first phase focused on understanding the complete request-to-activation ecosystem.
+</p>
+
+<p>
+I mapped workflows spanning:
+</p>
+
+<ul>
+
+<li>Red Hat Sales Cloud</li>
+<li>Salesforce</li>
+<li>Alfresco</li>
+<li>Zendesk</li>
+<li>HOCK Application</li>
+<li>AWS Marketplace</li>
+<li>Red Hat Trial Services</li>
+
+</ul>
+
+<p>
+The resulting architecture exposed multiple manual handoffs, duplicated processes, and disconnected telemetry streams that slowed activation and obscured customer behavior.
+</p>
+
+<h3>Critical Insight</h3>
+
+<p>
+Analytics revealed a 1,467% increase in users initiating AWS Marketplace provisioning but failing before subscription completion due to enterprise IAM permission restrictions.
+</p>
+
+<p>
+The problem was not customer intent.
+</p>
+
+<p>
+The problem was system design.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Reimagining the Trial Experience</h2>
+
+<h3>Simplified Activation</h3>
+
+<p>
+Embedded registration directly into trial entry experiences, collapsing authentication and activation into a streamlined onboarding flow.
+</p>
+
+<h3>Intelligent Routing</h3>
+
+<p>
+Redesigned TryIt SPA routing logic using application state flags to bypass unnecessary screens and route authenticated users directly into activation workflows.
+</p>
+
+<h3>Subscription Lifecycle Management</h3>
+
+<p>
+Designed and launched the My Trials dashboard.
+</p>
+
+<p>
+The dashboard became the centralized command center for:
+</p>
+
+<ul>
+
+<li>Active trials</li>
+<li>Expired trials</li>
+<li>Subscription status</li>
+<li>Remaining evaluation time</li>
+<li>Renewal eligibility</li>
+<li>Purchase readiness</li>
+
+</ul>
+
+<h3>Visual State Management</h3>
+
+<p>
+Introduced highly visible lifecycle indicators including:
+</p>
+
+<ul>
+
+<li>Days Remaining progress indicators</li>
+<li>Expiration states</li>
+<li>Activation eligibility messaging</li>
+<li>Subscription health indicators</li>
+
+</ul>
+
+</section>
+
+<section class="content-page">
+
+<h2>Enterprise Purchasing Paths</h2>
+
+<p>
+Research revealed meaningful differences between SMB and enterprise procurement behavior.
+</p>
+
+<p>
+A single conversion path could not effectively support both audiences.
+</p>
+
+<p>
+To address this, I redesigned the purchase experience around two distinct pathways:
+</p>
+
+<ul>
+
+<li><strong>Purchase Online</strong> — Marketplace-driven self-service transactions</li>
+<li><strong>Contact Sales</strong> — Enterprise procurement and licensing engagement</li>
+
+</ul>
+
+<p>
+This reduced ambiguity while improving lead qualification and conversion efficiency.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Technical Collaboration</h2>
+
+<h3>Publishing Modernization</h3>
+
+<p>
+Partnered with engineering teams to transition from hardcoded HTML trial center experiences to Drupal 10 Layout Builder architecture.
+</p>
+
+<p>
+This reduced publishing dependencies and significantly improved release velocity.
+</p>
+
+<h3>Shared Component Library</h3>
+
+<p>
+Collaborated with Design Engineering on implementation of the federated @rhpt/elements component library.
+</p>
+
+<p>
+This established a consistent UI foundation across the trial ecosystem and improved governance at scale.
+</p>
+
+<h3>Observability Improvements</h3>
+
+<p>
+Integrated Sentry monitoring to capture:
+</p>
+
+<ul>
+
+<li>Application failures</li>
+<li>API timeout events</li>
+<li>Browser-specific issues</li>
+<li>Activation edge cases</li>
+
+</ul>
+
+</section>
+
+<section class="content-page">
+
+<h2>Outcomes</h2>
+
+<h3>OpenShift Developer Sandbox</h3>
+
+<ul>
+<li>144% Year-over-Year increase in visits</li>
+<li>44% increase in activations</li>
+</ul>
+
+<h3>AWS Marketplace</h3>
+
+<ul>
+<li>1,081 Start Trial conversions</li>
+<li>51% successful completion of SSO return and provisioning workflow</li>
+</ul>
+
+<h3>Sales-Assisted Product Trials</h3>
+
+<ul>
+<li>505 submitted requests</li>
+<li>$20.5M opportunity value generated in Q1 FY26</li>
+</ul>
+
+<h3>Revenue Impact</h3>
+
+<ul>
+<li>$39.5M Closed Won Value attributed to product trial activity in Q3 FY25</li>
+</ul>
+
+</section>
+
+<section class="content-page">
+
+<h2>Organizational Impact</h2>
+
+<p>
+The redesigned ecosystem delivered more than improved user experiences.
+</p>
+
+<p>
+Integrated dashboards equipped product, sales, and leadership teams with actionable visibility into customer behavior and activation performance.
+</p>
+
+<p>
+The initiative improved lead routing efficiency, increased operational visibility, and helped establish a unified enterprise design standard through shared components and governance.
+</p>
+
+</section>
+
+<section class="content-page">
+
+<h2>Reflection</h2>
+
+<p>
+This project reinforced that customer acquisition challenges rarely exist within a single interface.
+</p>
+
+<p>
+The largest opportunities often emerge at the intersection of products, systems, teams, and business processes.
+</p>
+
+<p>
+Success required balancing customer experience, marketplace integrations, enterprise procurement models, technical constraints, and organizational alignment.
+</p>
+
+<p>
+The resulting platform created a scalable foundation for future growth while helping shift the organization toward frictionless cloud-native acquisition experiences.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>© 2026 Russ Blackburn</p>
+
+<p>
+Principal UX Designer at Red Hat
+</p>
+
+</footer>
+
+<script src="../../assets/js/theme.js"></script>
+
+</body>
+</html>
