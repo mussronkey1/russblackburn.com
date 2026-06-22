@@ -434,3 +434,15 @@ font-size: 3rem;
   }
 
 }
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+  color: #0A66C2;
+  flex-shrink: 0;
+}
