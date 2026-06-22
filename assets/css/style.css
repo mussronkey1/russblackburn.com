@@ -354,3 +354,57 @@ font-size: 3rem;
 }
 
 }
+/* ==========================================
+   Experience Snapshot
+========================================== */
+
+.experience-section {
+  padding: 4rem 0 5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.experience-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.experience-number {
+  display: block;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+
+.experience-label {
+  display: block;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.experience-summary {
+  max-width: 900px;
+}
+
+.experience-summary p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
