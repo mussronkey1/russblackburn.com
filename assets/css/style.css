@@ -2,9 +2,11 @@
    Russ Blackburn Portfolio
 ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;650;700;800;900&display=swap");
 
 :root {
+  --font-sans: "Geist", var(--font-sans);
+  --font-mono: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
   --bg: #ffffff;
   --surface: #f8f8f8;
   --text: #111111;
@@ -39,7 +41,39 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+  letter-spacing: -0.035em;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+strong,
+b {
+  font-weight: 700;
 }
 
 h1,
@@ -48,7 +82,7 @@ h3,
 .logo,
 .case-metrics span,
 .case-hero__metrics span {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
 }
 
 img {
@@ -170,7 +204,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 800;
 
   font-size: clamp(4rem, 8vw, 7rem);
@@ -221,7 +255,7 @@ nav a:hover {
 .impact-number {
   display: block;
 
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-weight: 800;
 
   font-size: 3rem;
@@ -257,7 +291,7 @@ nav a:hover {
 }
 
 .specialization-card h3 {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   margin-bottom: .75rem;
 }
 
@@ -278,7 +312,7 @@ nav a:hover {
 }
 
 .page-header h1 {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
 
   font-size: clamp(4rem, 7vw, 6rem);
   line-height: 1.05;
@@ -302,7 +336,7 @@ nav a:hover {
 
 .content-page h1,
 .content-page h2 {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
 }
 
 /* ==========================================
@@ -385,7 +419,7 @@ nav a:hover {
 .case-system-map h2,
 .case-dashboard h2,
 .case-reflection h2 {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   letter-spacing: 0;
 }
 
@@ -419,9 +453,10 @@ nav a:hover {
 
 .case-hero__metrics span {
   display: block;
+  letter-spacing: -0.045em;
   margin-bottom: .7rem;
   color: var(--accent);
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(2.25rem, 3.2vw, 3.1rem);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
@@ -476,7 +511,7 @@ nav a:hover {
 
 .case-metrics {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   border-top: 1px solid var(--case-rule-soft);
   border-bottom: 1px solid var(--case-rule-soft);
 }
@@ -493,9 +528,12 @@ nav a:hover {
 
 .case-metrics span {
   display: block;
+  white-space: nowrap;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
   margin-bottom: 1rem;
   color: var(--accent);
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   font-weight: 800;
   line-height: .9;
@@ -611,9 +649,11 @@ nav a:hover {
 
 .case-evidence-grid span {
   display: block;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
   margin-bottom: 1rem;
   color: var(--accent);
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(2.3rem, 4vw, 3.8rem);
   font-weight: 800;
   line-height: .9;
@@ -621,7 +661,7 @@ nav a:hover {
 
 .case-evidence-grid h3 {
   margin: 0 0 .75rem;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.35rem;
   line-height: 1.1;
 }
@@ -640,7 +680,7 @@ nav a:hover {
 .case-outcomes h3,
 .case-dashboard__grid h3 {
   margin-top: 0;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.45rem;
   line-height: 1.1;
 }
@@ -701,7 +741,7 @@ nav a:hover {
 
 .case-map-lane text {
   fill: var(--case-muted);
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 800;
   letter-spacing: .08em;
@@ -732,7 +772,7 @@ nav a:hover {
 
 .case-map-node text {
   fill: var(--case-ink);
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--font-sans);
   font-size: 15px;
   pointer-events: none;
 }
@@ -858,7 +898,7 @@ nav a:hover {
 
 .case-architecture__copy h3 {
   margin: 0;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(1.65rem, 2.8vw, 2.55rem);
   line-height: 1;
 }
@@ -907,7 +947,7 @@ nav a:hover {
 
 .case-map-signal text {
   fill: var(--case-card);
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--font-sans);
   font-size: 20px;
   font-weight: 800;
   text-anchor: middle;
@@ -915,8 +955,8 @@ nav a:hover {
 
 .case-map-signal text:first-of-type {
   fill: var(--accent);
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 58px;
+  font-family: var(--font-sans);
+  font-size: 44px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -971,8 +1011,9 @@ nav a:hover {
 
 .case-dashboard__grid strong {
   display: block;
+  overflow-wrap: anywhere;
   min-height: 70px;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(1.55rem, 2vw, 2.15rem);
   line-height: 1;
 }
@@ -1066,7 +1107,7 @@ nav a:hover {
 ========================================== */
 
 .section-title {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-sans);
 
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -1084,7 +1125,7 @@ nav a:hover {
   display: grid;
 
   grid-template-columns:
-  repeat(auto-fit, minmax(420px, 1fr));
+  repeat(auto-fit, minmax(min(100%, 420px), 1fr));
 
   gap: 2rem;
 }
@@ -1228,6 +1269,33 @@ footer {
   color: var(--accent);
 }
 
+
+@media (max-width: 1024px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-hero,
+  .case-hero--editorial {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .case-architecture {
+    grid-template-columns: 1fr;
+  }
+
+  .case-dashboard__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-feature-grid--three,
+  .case-evidence-grid,
+  .case-chip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* ==========================================
    Mobile
 ========================================== */
@@ -1350,7 +1418,7 @@ footer {
   }
 
   .case-architecture__canvas svg {
-    min-width: 980px;
+    min-width: 860px;
   }
 
   .case-architecture__controls {
