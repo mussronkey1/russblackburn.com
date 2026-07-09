@@ -1,1 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">Red Hat Product Trial ecosystem illustration</title>
+  <desc id="desc">An editorial SVG system illustration showing product trial entry, identity, activation, lifecycle management, telemetry, and enterprise sales routing.</desc>
+  <style>
+    :root {
+      --rh-svg-bg: #fbfaf7;
+      --rh-svg-surface: #ffffff;
+      --rh-svg-soft: #f1ebe3;
+      --rh-svg-ink: #151313;
+      --rh-svg-muted: #655f57;
+      --rh-svg-rule: #ddd4c8;
+      --rh-svg-red: #ee0000;
+      --rh-svg-green: #2e9d78;
+      --rh-svg-gold: #d69a18;
+    }
 
+    .bg { fill: var(--rh-svg-bg); }
+    .panel { fill: var(--rh-svg-surface); stroke: var(--rh-svg-rule); stroke-width: 2; }
+    .soft { fill: var(--rh-svg-soft); }
+    .ink { fill: var(--rh-svg-ink); }
+    .muted { fill: var(--rh-svg-muted); }
+    .red { fill: var(--rh-svg-red); }
+    .green { fill: var(--rh-svg-green); }
+    .gold { fill: var(--rh-svg-gold); }
+    .line { fill: none; stroke: var(--rh-svg-ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .red-line { fill: none; stroke: var(--rh-svg-red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .muted-line { fill: none; stroke: var(--rh-svg-rule); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 8 12; }
+    text { font-family: Arial, sans-serif; }
+    .label { fill: var(--rh-svg-ink); font-size: 18px; font-weight: 700; }
+    .caption { fill: var(--rh-svg-muted); font-size: 13px; }
+    .metric { fill: var(--rh-svg-red); font-size: 40px; font-weight: 800; }
+  </style>
+
+  <rect class="bg" width="760" height="560" rx="34"/>
+  <path class="muted-line" d="M96 112h568M96 448h568M140 84v392M620 84v392"/>
+
+  <rect class="panel" x="76" y="72" width="608" height="416" rx="26"/>
+  <rect class="ink" x="76" y="72" width="608" height="70" rx="26"/>
+  <path class="ink" d="M76 116h608v26H76z"/>
+  <circle class="red" cx="122" cy="107" r="11"/>
+  <circle class="gold" cx="158" cy="107" r="11"/>
+  <circle class="green" cx="194" cy="107" r="11"/>
+  <text x="232" y="114" fill="#fff" font-size="20" font-weight="700">Product Trial Ecosystem</text>
+
+  <g>
+    <rect class="panel" x="112" y="188" width="156" height="94" rx="18"/>
+    <text class="label" x="140" y="230">Trial Entry</text>
+    <text class="caption" x="140" y="255">Self-service intent</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="302" y="188" width="156" height="94" rx="18"/>
+    <text class="label" x="330" y="230">Identity</text>
+    <text class="caption" x="330" y="255">SSO return path</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="492" y="188" width="156" height="94" rx="18"/>
+    <text class="label" x="520" y="230">Activation</text>
+    <text class="caption" x="520" y="255">Provisioning state</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="112" y="336" width="156" height="82" rx="18"/>
+    <text class="label" x="140" y="373">My Trials</text>
+    <text class="caption" x="140" y="398">Lifecycle hub</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="302" y="336" width="156" height="82" rx="18"/>
+    <text class="label" x="330" y="373">Telemetry</text>
+    <text class="caption" x="330" y="398">Decision signal</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="492" y="336" width="156" height="82" rx="18"/>
+    <text class="label" x="520" y="373">Sales Path</text>
+    <text class="caption" x="520" y="398">Enterprise routing</text>
+  </g>
+
+  <path class="red-line" d="M268 235h34M458 235h34M570 282v54M492 377h-34M302 377h-34"/>
+  <path class="red" d="M294 225l14 10-14 10zM484 225l14 10-14 10zM560 328l10 14 10-14z"/>
+
+  <g>
+    <rect class="soft" x="396" y="448" width="244" height="56" rx="16"/>
+    <text class="metric" x="418" y="488">1,467%</text>
+    <text class="caption" x="552" y="472">failure signal</text>
+    <text class="caption" x="552" y="492">exposed by telemetry</text>
+  </g>
+</svg>
