@@ -2,10 +2,10 @@
    Russ Blackburn Portfolio
 ========================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;650;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;800;900&display=swap");
 
 :root {
-  --font-sans: "Geist", var(--font-sans);
+  --font-sans: var(--font-sans);
   --font-mono: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
   --bg: #ffffff;
   --surface: #f8f8f8;
@@ -57,13 +57,12 @@ body {
     background var(--transition),
     color var(--transition);
 }
-
 h1,
 h2,
 h3,
 h4 {
   text-wrap: balance;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.032em;
 }
 
 p,
@@ -453,7 +452,7 @@ nav a:hover {
 
 .case-hero__metrics span {
   display: block;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
   margin-bottom: .7rem;
   color: var(--accent);
   font-family: var(--font-sans);
@@ -529,7 +528,7 @@ nav a:hover {
 .case-metrics span {
   display: block;
   white-space: nowrap;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
   margin-bottom: 1rem;
   color: var(--accent);
