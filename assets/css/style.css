@@ -408,8 +408,8 @@ nav a:hover {
 
 .case-hero__metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: clamp(1.25rem, 3vw, 3rem);
   margin-top: clamp(2.4rem, 4vw, 3.4rem);
 }
 
@@ -424,9 +424,11 @@ nav a:hover {
   margin-bottom: .7rem;
   color: var(--accent);
   font-family: "Bricolage Grotesque", sans-serif;
-  font-size: clamp(2rem, 4vw, 3.45rem);
+  font-size: clamp(2.25rem, 3.2vw, 3.1rem);
   font-weight: 800;
-  line-height: .9;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .case-hero__metrics p {
@@ -908,14 +910,16 @@ nav a:hover {
 .case-map-signal text {
   fill: var(--case-card);
   font-family: "Work Sans", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
+  text-anchor: middle;
 }
 
 .case-map-signal text:first-of-type {
   fill: var(--accent);
   font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 52px;
+  font-size: 58px;
+  font-variant-numeric: tabular-nums;
 }
 
 .case-dashboard__frame {
