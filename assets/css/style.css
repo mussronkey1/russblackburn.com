@@ -2,7 +2,7 @@
    Russ Blackburn Portfolio
 ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -39,18 +39,16 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
-  background: var(--bg);
-  color: var(--text);
-
-  font-family: "Work Sans", sans-serif;
-  line-height: 1.7;
-
-  transition:
-    background var(--transition),
-    color var(--transition);
+h1,
+h2,
+h3,
+.logo,
+.case-metrics span,
+.case-hero__metrics span {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 img {
