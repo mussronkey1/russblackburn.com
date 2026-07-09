@@ -14,6 +14,7 @@ name="description"
 content="Case study detailing the redesign of the Red Hat Product Trial ecosystem, subscription onboarding, marketplace activations, and trial management experiences.">
 
 <link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/red-hat-product-trials.css">
 </head>
 
 <body>
@@ -133,9 +134,6 @@ My role was to redesign the end-to-end onboarding, activation, subscription mana
 </p>
 </div>
 
-<template data-svg-placeholder="ecosystem-overview">
-Future SVG illustration: portfolio-wide product trial ecosystem with self-service, sales-assisted, marketplace, and enterprise evaluation channels.
-</template>
 </section>
 
 <section class="case-section case-shell">
@@ -311,18 +309,18 @@ Analytics revealed a 1,467% increase in users initiating AWS Marketplace provisi
 </g>
 <g class="case-map-node is-active" data-map-node="intent" role="button" tabindex="0" aria-label="Trial entry channels">
 <rect x="48" y="112" width="212" height="88" rx="16"/>
-<text x="76" y="150">Product Trial Center</text>
-<text x="76" y="176">Self-service product intent</text>
+<text x="76" y="150">Trial Center</text>
+<text x="76" y="176">Product intent</text>
 </g>
 <g class="case-map-node" data-map-node="intent" role="button" tabindex="0" aria-label="Marketplace entry channels">
 <rect x="48" y="222" width="212" height="88" rx="16"/>
 <text x="76" y="260">AWS Marketplace</text>
-<text x="76" y="286">Cloud buyer activation</text>
+<text x="76" y="286">Cloud buyers</text>
 </g>
 <g class="case-map-node" data-map-node="intent" role="button" tabindex="0" aria-label="Sales-assisted entry channels">
 <rect x="48" y="362" width="212" height="88" rx="16"/>
-<text x="76" y="400">Sales-Assisted Trials</text>
-<text x="76" y="426">Enterprise evaluation path</text>
+<text x="76" y="400">Sales Trials</text>
+<text x="76" y="426">Enterprise path</text>
 </g>
 <g class="case-map-node" data-map-node="sso" role="button" tabindex="0" aria-label="Red Hat single sign-on">
 <rect x="338" y="112" width="202" height="88" rx="16"/>
@@ -350,31 +348,57 @@ Analytics revealed a 1,467% increase in users initiating AWS Marketplace provisi
 </g>
 <g class="case-map-node" data-map-node="provisioning" role="button" tabindex="0" aria-label="Drupal publishing architecture">
 <rect x="338" y="362" width="198" height="88" rx="16"/>
-<text x="366" y="400">Drupal Layout Builder</text>
-<text x="366" y="426">Publishing velocity</text>
+<text x="366" y="400">Drupal</text>
+<text x="366" y="426">Publishing</text>
 </g>
 <g class="case-map-node" data-map-node="subscription" role="button" tabindex="0" aria-label="Federated component library">
 <rect x="564" y="362" width="198" height="88" rx="16"/>
 <text x="592" y="400">@rhpt/elements</text>
-<text x="592" y="426">Shared UI governance</text>
+<text x="592" y="426">UI governance</text>
 </g>
 <g class="case-map-node" data-map-node="provisioning" role="button" tabindex="0" aria-label="Sentry observability">
 <rect x="830" y="362" width="218" height="88" rx="16"/>
-<text x="858" y="400">Sentry + Analytics</text>
-<text x="858" y="426">Failures, APIs, browsers</text>
+<text x="858" y="400">Sentry</text>
+<text x="858" y="426">Observability</text>
 </g>
 <g class="case-map-node" data-map-node="subscription" role="button" tabindex="0" aria-label="Sales Cloud routing">
 <rect x="218" y="492" width="264" height="88" rx="16"/>
-<text x="246" y="530">Sales Cloud Routing</text>
-<text x="246" y="556">Lead qualification + handoff</text>
+<text x="246" y="530">Sales Cloud</text>
+<text x="246" y="556">Qualified handoff</text>
 </g>
 <g class="case-map-signal">
-<rect x="690" y="480" width="360" height="112" rx="18"/>
-<text x="870" y="538">1,467%</text>
-<text x="870" y="568">Failure signal exposed</text>
-<text x="870" y="592">by telemetry</text>
+<rect x="670" y="470" width="400" height="124" rx="18"/>
+<text x="704" y="530">1,467%</text>
+<text x="704" y="562">Failure signal exposed</text>
+<text x="704" y="586">by telemetry</text>
 </g>
 </svg>
+
+<div class="case-architecture__mobile" aria-label="Mobile architecture summary">
+<article>
+<span>01</span>
+<h3>Entry channels</h3>
+<p>Product Trial Center, AWS Marketplace, and sales-assisted requests captured evaluation intent.</p>
+</article>
+
+<article>
+<span>02</span>
+<h3>Activation core</h3>
+<p>Red Hat SSO and Trial Services carried users into provisioning, where hidden IAM permissions blocked completion.</p>
+</article>
+
+<article>
+<span>03</span>
+<h3>Lifecycle visibility</h3>
+<p>My Trials, observability, shared components, and Sales Cloud routing made trial state and follow-up visible.</p>
+</article>
+
+<article>
+<span>1,467%</span>
+<h3>Failure signal</h3>
+<p>Telemetry exposed marketplace provisioning starts that failed before subscription completion.</p>
+</article>
+</div>
 </div>
 
 <div class="case-architecture__panel">
@@ -635,9 +659,6 @@ The initiative improved lead routing efficiency, increased operational visibilit
 </p>
 </div>
 
-<template data-svg-placeholder="organizational-impact">
-Future SVG illustration: product, sales, leadership, analytics, and design engineering teams connected by shared dashboards and governance.
-</template>
 </section>
 
 <section class="case-section case-shell case-reflection">
