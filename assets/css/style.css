@@ -393,21 +393,20 @@ nav a:hover {
 }
 
 .case-hero {
-  min-height: calc(100vh - 86px);
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr);
-  gap: clamp(2.5rem, 6vw, 6.5rem);
-  align-items: center;
-  padding: clamp(6rem, 10vw, 10rem) 0 clamp(4rem, 8vw, 7rem);
+  width: min(100% - 3rem, 920px);
+  min-height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: clamp(5.5rem, 9vw, 7rem) 0 clamp(4rem, 7vw, 5.5rem);
 }
 
 .case-hero--editorial {
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+  grid-template-columns: 1fr;
 }
 
 .case-eyebrow,
 .case-kicker {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   color: var(--accent);
   font-size: .78rem;
   font-weight: 800;
@@ -425,25 +424,25 @@ nav a:hover {
 }
 
 .case-hero h1 {
-  max-width: 840px;
-  margin: 0;
-  font-size: clamp(3.7rem, 7.4vw, 7.4rem);
-  line-height: .92;
+  max-width: 900px;
+  margin: 0 0 2rem;
+  font-size: clamp(3rem, 5vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 
 .case-dek {
-  max-width: 760px;
-  margin: 2rem 0 0;
+  max-width: 680px;
+  margin: 0;
   color: var(--case-muted);
-  font-size: clamp(1.12rem, 1.8vw, 1.38rem);
-  line-height: 1.65;
+  font-size: clamp(1.15rem, 1.7vw, 1.25rem);
+  line-height: 1.7;
 }
 
 .case-hero__metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-  gap: clamp(1.25rem, 3vw, 3rem);
-  margin-top: clamp(2.4rem, 4vw, 3.4rem);
+  display: none;
 }
 
 .case-hero__metrics article {
@@ -473,7 +472,7 @@ nav a:hover {
 }
 
 .case-hero__visual {
-  margin: 0;
+  display: none;
 }
 
 .case-hero__visual img,
@@ -1278,7 +1277,7 @@ footer {
 
   .case-hero,
   .case-hero--editorial {
-    grid-template-columns: 1fr;
+    width: min(100% - 2.5rem, 920px);
     min-height: auto;
   }
 
@@ -1343,8 +1342,8 @@ footer {
   }
 
   .case-hero {
+    width: min(100% - 2rem, 920px);
     min-height: auto;
-    grid-template-columns: 1fr;
     padding: 4rem 0 3rem;
   }
 
@@ -1353,11 +1352,12 @@ footer {
   }
 
   .case-hero h1 {
-    font-size: clamp(3.2rem, 15vw, 4.7rem);
+    font-size: clamp(2.8rem, 11vw, 4rem);
+    line-height: 1.04;
   }
 
   .case-hero__visual {
-    order: -1;
+    display: none;
   }
 
   .case-hero__metrics {
