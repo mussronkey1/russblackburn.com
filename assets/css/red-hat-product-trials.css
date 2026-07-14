@@ -23,7 +23,12 @@
 .case-study .case-map-signal text {
   text-anchor: start;
 }
-
+.case-map-flow {
+  stroke: var(--case-ink);
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .case-study .case-map-signal text:first-of-type {
   font-size: 44px;
 }
@@ -47,6 +52,11 @@
   .case-study .case-architecture__canvas {
     overflow-x: visible;
   }
+  .case-architecture__canvas {
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+  background: #f7f2ec;
+}
 
   .case-study .case-architecture__canvas svg {
     display: none;
@@ -90,4 +100,9 @@
     font-size: .98rem;
     line-height: 1.55;
   }
+}
+.case-ecosystem-svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
