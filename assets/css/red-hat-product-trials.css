@@ -1,6 +1,14 @@
 /* ==========================================
    Red Hat Product Trials Case Study
    Page-specific layout and typography
+
+   Updated:
+   - Restores the earlier two-column tab layout
+   - Places the final "Target" tab across the full row
+   - Preserves the stacked panel + full-width diagram
+   - Fixes the mobile media-query brace
+   - Uses stronger selectors so this file can override
+     the page-level architecture styles in index.html
 ========================================== */
 
 .case-study .case-hero {
@@ -76,6 +84,10 @@
   white-space: nowrap;
 }
 
+/* ------------------------------------------
+   Architecture panel
+------------------------------------------ */
+
 .case-study .case-architecture {
   display: flex;
   flex-direction: column;
@@ -92,17 +104,42 @@
   background: var(--case-card);
 }
 
-.case-study .case-architecture__controls {
+/*
+   The extra .case-system-map selector intentionally raises specificity.
+   This allows the external CSS file to override the later page-level
+   <style> block currently embedded in index.html.
+*/
+.case-study .case-system-map .case-architecture__controls {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
   border-bottom: 1px solid var(--case-rule-soft);
 }
 
-.case-study .case-architecture__controls button {
+.case-study .case-system-map .case-architecture__controls button:last-child {
+  grid-column: 1 / -1;
+}
+
+.case-study .case-system-map .case-architecture__controls button {
   min-height: 64px;
   padding: .8rem .6rem;
+  border: 0;
+  border-radius: 0;
   font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.case-study .case-system-map .case-architecture__controls button.is-active,
+.case-study .case-system-map .case-architecture__controls button[aria-selected="true"] {
+  background: var(--case-ink, #151515);
+  color: #fff;
+}
+
+.case-study .case-system-map .case-architecture__controls button:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
 }
 
 .case-study .case-architecture__copy {
@@ -158,6 +195,10 @@
   display: none;
 }
 
+/* ------------------------------------------
+   Responsive layout
+------------------------------------------ */
+
 @media (min-width: 900px) {
   .case-study .case-metrics article {
     border-right: 1px solid var(--case-rule-soft);
@@ -175,15 +216,9 @@
     margin-bottom: 1.5rem;
     font-size: .95rem;
   }
-}
 
   .case-study .case-hero__copy {
     padding-top: 1rem;
-  }
-
-  .case-study .case-eyebrow {
-    margin-bottom: 1.5rem;
-    font-size: .95rem;
   }
 
   .case-study .case-hero h1 {
@@ -198,11 +233,11 @@
     line-height: 1.65;
   }
 
-  .case-study .case-architecture__controls {
+  .case-study .case-system-map .case-architecture__controls {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .case-study .case-architecture__controls button:last-child {
+  .case-study .case-system-map .case-architecture__controls button:last-child {
     grid-column: 1 / -1;
   }
 
@@ -255,5 +290,15 @@
     color: var(--case-muted);
     font-size: .98rem;
     line-height: 1.55;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-study .case-system-map .case-architecture__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study .case-system-map .case-architecture__controls button:last-child {
+    grid-column: auto;
   }
 }
